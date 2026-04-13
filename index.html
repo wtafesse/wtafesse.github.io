@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondmagegn T. Tirkaso - Economist & Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            color: white;
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header h1 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #d97d54;
+            border-bottom-color: #d97d54;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .profile-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            padding: 0.5rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.75rem;
+            text-decoration: none;
+            color: #1a3a52;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: #d97d54;
+            color: white;
+        }
+
+        .contact-box {
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        .contact-box a {
+            color: #d97d54;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 2rem;
+        }
+
+        .intro-box {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            font-family: 'Crimson Pro', serif;
+            color: #1a3a52;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: #fff8f0;
+            border-left: 4px solid #d97d54;
+            border-radius: 4px;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        .filter-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-box input,
+        .filter-box select {
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .filter-box input {
+            flex: 1 1 300px;
+        }
+
+        .filter-box input:focus,
+        .filter-box select:focus {
+            border-color: #d97d54;
+        }
+
+        .filter-box select {
+            background: white;
+            cursor: pointer;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: #1a3a52;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #d97d54;
+        }
+
+        .pub-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border-left: 4px solid #d97d54;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pub-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+
+        .pub-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .year-badge {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            background: #1a3a52;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+        }
+
+        .type-badge {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pub-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 0.75rem;
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .pub-authors {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .pub-journal {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background: #fff8f0;
+            color: #d97d54;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .pub-details {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .pub-details h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a3a52;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pub-details p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-details img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            cursor: zoom-in;
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .pub-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #d97d54;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .pub-link:hover {
+            background: #c76d44;
+        }
+
+        .engagement-card,
+        .teaching-card,
+        .conference-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .engagement-card h3,
+        .teaching-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 0.75rem;
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .engagement-meta {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        .course-item {
+            padding: 0.75rem 1rem;
+            background: #f5f5f5;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .conference-item {
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .conference-item:last-child {
+            border-bottom: none;
+        }
+
+        .conference-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+        }
+
+        .conference-meta {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            background: #1a3a52;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            cursor: zoom-out;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <h1>Wondmagegn T. Tirkaso</h1>
+                <p>Economist • Food and Agriculture Organization of the United Nations (FAO)</p>
+            </div>
+            <nav>
+                <a href="#about" onclick="scrollTo('about')">About</a>
+                <a href="#publications" onclick="scrollTo('publications')">Publications</a>
+                <a href="#engagements" onclick="scrollTo('engagements')">Engagements</a>
+                <a href="#teaching" onclick="scrollTo('teaching')">Teaching</a>
+                <a href="#conferences" onclick="scrollTo('conferences')">Conferences</a>
+                <a href="#contact" onclick="scrollTo('contact')">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <div class="about-grid">
+                <div class="profile-sidebar">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCe2ZeNO0_xzuO8809g39IQB9xuBHA064fbH2hmMlfZdhQ6ch2y-ttK2EDVP8kLo6r7Fa3YWiDvZP8DR9ZwpMuSntW2Dmgd9kZ0AKpnkwjDWqAl485YF1lTnNwS90Jd2CUXR5fdpUpZEnmdPhDzmZF7YbeA3ZKS3p6CWTnd7uDWzN_9MlKjPIkrfn99LAs0nQQRdHjtcWDpLfS9JFiw-LoE932mytstuZ66=w1280" 
+                         alt="Wondmagegn T. Tirkaso" class="profile-img">
+                    
+                    <div class="social-links">
+                        <a href="https://www.researchgate.net/profile/Wondmagegn-Tirkaso" target="_blank">ResearchGate</a>
+                        <a href="https://scholar.google.se/citations?user=bwxyUQ0AAAAJ&hl=en" target="_blank">Scholar</a>
+                        <a href="https://www.linkedin.com/in/wondmagegntafesse" target="_blank">LinkedIn</a>
+                        <a href="https://twitter.com/w_tafesse" target="_blank">Twitter</a>
+                    </div>
+
+                    <div class="contact-box">
+                        <div style="margin-bottom: 0.75rem; font-weight: 600;">📧 Email</div>
+                        <div style="margin-bottom: 0.25rem;"><a href="mailto:wondewin@gmail.com">wondewin@gmail.com</a></div>
+                        <div><a href="mailto:Wondmagegn.Tirkaso@fao.org">Wondmagegn.Tirkaso@fao.org</a></div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h2>About</h2>
+                    
+                    <div class="intro-box">
+                        I am an applied economist working at the intersection of agriculture, environment, health, and development. My research focuses on productivity, climate and sustainability policies, and One Health, with the aim of providing practical, policy-relevant evidence for low- and middle-income countries.
+                    </div>
+
+                    <p>I am particularly interested in how agrifood systems can improve livelihoods and economic growth while addressing public health risks and environmental constraints.</p>
+
+                    <p>I hold a PhD in Economics from the Swedish University of Agricultural Sciences (SLU) and a BSc in Economics from Jimma University, and I have been a visiting scholar at the University of Western Australia. My academic and professional experience spans Europe, Africa, Asia, and Latin America, combining rigorous quantitative methods with a strong policy orientation.</p>
+
+                    <p>Currently, I work as an economist at the United Nations Food and Agriculture Organization (FAO), where I contribute to global and country-level analysis on antimicrobial resistance economics, livestock productivity, climate mitigation and adaptation, and agrifood investment strategies. My work links micro-level evidence with economy-wide modelling to understand trade-offs, identify priority investments, and provide practical inputs for policymaking in low- and middle-income countries, especially in settings facing structural constraints and high uncertainty.</p>
+
+                    <p>My research is published in journals including Nature Communications, Agricultural Economics, Energy Economics, and Energy Policy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+
+            <div class="filter-box">
+                <input type="text" id="searchInput" placeholder="Search publications, topics, keywords..." onkeyup="filterPublications()">
+                <select id="yearFilter" onchange="filterPublications()">
+                    <option value="all">All Years</option>
+                    <option value="2025">2025</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2016">2016</option>
+                </select>
+                <select id="typeFilter" onchange="filterPublications()">
+                    <option value="all">All Types</option>
+                    <option value="peer-reviewed">Peer Reviewed</option>
+                    <option value="working-paper">Working Papers</option>
+                    <option value="book-chapter">Book Chapters</option>
+                </select>
+                <button class="btn" onclick="exportBibTeX()">⬇ Export BibTeX</button>
+            </div>
+
+            <div id="pubCount" style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;"></div>
+
+            <div id="publicationsList">
+                <!-- Publications will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="engagements">
+            <h2>Professional Engagements</h2>
+
+            <div class="engagement-card">
+                <h3>High-Level Technical Workshop on Antimicrobial Use Mitigation and RENOFARM Implementation</h3>
+                <div class="engagement-meta">
+                    <span>📍 Lusaka, Zambia</span>
+                    <span>📅 August 16-24, 2025</span>
+                </div>
+                <p>Served as FAO technical lead for a high-level mission in Zambia supporting efforts to advance antimicrobial use (AMU) mitigation in livestock. The mission contextualized FAO's microeconomic optimization framework within Farmer Field School (FFS) programmes and supported its application under the RENOFARM initiative.</p>
+                <div class="image-gallery">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUD5J1vFC5u45p5QiyfB1HdK51_1hkOlxV1jBIpN9mscgD4-r9nuNmnuwV0bt5xdBO2DE5W6TfeOW0kURGowf_4enN-gMw_eoJzL91ApQ2Px58z_E1XD07d9Q5IvdHVZlfRFBL_xhn6XjOgUgPXy8HFRMM8CcTX6taollsdRc0l4XLcY57Sv42K8UnwXbb-LII6d1pmjKdpVxZrR5a5nOBhMJs6a50l34Ja8=w1280" 
+                         alt="Zambia Workshop" onclick="openModal(this.src)">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCndq24lf_36tw2kAU7u7awWgdSvlontb2f2NLp4sUfButrvRVIURddZ4meoIenuMIHMMAtBUNX0KA6hNd4sm5ndVIajW2Wp73fHUcza3QXNT1aa35SeedjFGb9uzXAJ9Yaa5kaW4AMgQVgmin7gvCvSPG1LEqrC3FwSADWSPubjxOXrz9Awgr5jaMZudF3uEF0Q-EjbycAdKX-rT2wzximQvPbfcaL3by45JE=w1280" 
+                         alt="Zambia Workshop" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <div class="engagement-card">
+                <h3>Training and Capacity Building on Productivity and Efficiency Analysis in Livestock Production</h3>
+                <div class="engagement-meta">
+                    <span>📍 Hanoi, Vietnam</span>
+                    <span>📅 July 3-7, 2023</span>
+                </div>
+                <p>Delivered hands-on capacity-building training for the General Statistics Office of Vietnam (GSO) and the Institute of Policy and Strategy for Agriculture and Rural Development (IPSARD) on productivity and efficiency analysis in the livestock sector, with a strong focus on Stochastic Frontier Models (SFM/SFA) using STATA.</p>
+                <div class="image-gallery">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUA9KXkGrl8lKPGRi2wfLRJJjev8geHFS5ekDJmpHUjW_725-fowqp9wHoVMxKtLsbX7GyLeX0Ip9HaMadU9bOt96MINK50JDFtX8CMF0NHzWWAzBhid-Mu-gIHXpzshfnLbrejziRwUTAXaZoXxq-0ggLKEvhjO3rcM7cvStsXzzin4SGaboDrN5cJT_0jEjb4CG6PVN83uHW-8vts0-3DKy8wkprgWfbbKGyc=w1280" 
+                         alt="Vietnam Training" onclick="openModal(this.src)">
+                    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDY-lh6hmDoRw_DMIS1fVb2kAalKTEf0Z-7DveIF527tIbGbajWhoVjkc-SZQpCUip-t5cUoMDkvD68r4Ml1sw5q94VtUiDazKOOu91g-b7_-6ykGPXF8sB7oGcq8YofHoFVhizDuVeQuEq7sCmPQGStkcpzduuCFzFz3Vqp0On2HFKcY0xKzCIES0PwhQGjRQe5Fr4FKUVlEHwQlEjTuuxahNcG9z3yYze=w1280" 
+                         alt="Vietnam Training" onclick="openModal(this.src)">
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching Experience</h2>
+
+            <div class="teaching-card">
+                <h3>Swedish University of Agricultural Sciences (SLU)</h3>
+                <p style="font-style: italic; color: #666; margin-bottom: 1rem;">Department of Economics</p>
+                <div class="course-item">
+                    <span style="font-weight: 500; color: #333;">Microeconomics (NA0163)</span>
+                    <span style="font-size: 0.85rem; color: #666;">Spring 2016</span>
+                </div>
+                <div class="course-item">
+                    <span style="font-weight: 500; color: #333;">Environmental Economics – Review Course (NA0120)</span>
+                    <span style="font-size: 0.85rem; color: #666;">Spring 2016</span>
+                </div>
+            </div>
+
+            <div class="teaching-card">
+                <h3>Stockholm School of Economics (SSE)</h3>
+                <p style="font-style: italic; color: #666; margin-bottom: 1rem;">The Swedish Program</p>
+                <div class="course-item">
+                    <span style="font-weight: 500; color: #333;">Energy and Environmental Economics</span>
+                    <span style="font-size: 0.85rem; color: #666;">Fall 2021</span>
+                </div>
+                <div class="course-item">
+                    <span style="font-weight: 500; color: #333;">Energy and Environmental Economics</span>
+                    <span style="font-size: 0.85rem; color: #666;">Spring 2022</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="conferences">
+            <h2>Conferences & Presentations</h2>
+
+            <div class="conference-box">
+                <div class="conference-item">
+                    <h4>First Meeting of the Quadripartite Technical Group on the Economics of Antimicrobial Resistance</h4>
+                    <div class="conference-meta">
+                        <span>📍 WHO, Geneva, Switzerland</span>
+                        <span>📅 April 4-5, 2023</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>Agricultural and Applied Economics Association (AAEA) Annual Meeting</h4>
+                    <div class="conference-meta">
+                        <span>📍 Atlanta, USA</span>
+                        <span>📅 July 2019</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>Ulvön Conference on Environmental Economics</h4>
+                    <div class="conference-meta">
+                        <span>📍 Ulvön, Sweden</span>
+                        <span>📅 June 2019</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>EAAE Seminar 168: Behavioural Perspectives in Agricultural Economics and Management</h4>
+                    <div class="conference-meta">
+                        <span>📍 SLU, Uppsala, Sweden</span>
+                        <span>📅 February 2019</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>Nordic Annual Environmental and Resource Economics (NAERE) Workshop</h4>
+                    <div class="conference-meta">
+                        <span>📍 Bergen, Norway</span>
+                        <span>📅 April 2018</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>15th European Workshop on Efficiency and Productivity Analysis (EWEPA)</h4>
+                    <div class="conference-meta">
+                        <span>📍 Loughborough, UK</span>
+                        <span>📅 June 2017</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>Centre for Environmental and Resource Economics (CERE) Seminar</h4>
+                    <div class="conference-meta">
+                        <span>📍 Umeå, Sweden</span>
+                        <span>📅 October 2017</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>International Society of Ecological Economics (ISEE) Conference</h4>
+                    <div class="conference-meta">
+                        <span>📍 Washington, D.C., USA</span>
+                        <span>📅 June 2016</span>
+                    </div>
+                </div>
+
+                <div class="conference-item">
+                    <h4>Euroleague for Life Sciences (ELLS) Scientific Student Conference</h4>
+                    <div class="conference-meta">
+                        <span>📍 Vienna, Austria</span>
+                        <span>📅 November 14-16, 2013</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 1.5rem;">
+                    Food and Agriculture Organization of the United Nations (FAO)<br>
+                    Viale delle Terme di Caracalla, 00153, Roma, Italy
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://www.researchgate.net/profile/Wondmagegn-Tirkaso" target="_blank" class="btn">ResearchGate</a>
+                    <a href="https://scholar.google.se/citations?user=bwxyUQ0AAAAJ&hl=en" target="_blank" class="btn">Google Scholar</a>
+                    <a href="https://www.linkedin.com/in/wondmagegntafesse" target="_blank" class="btn">LinkedIn</a>
+                    <a href="https://twitter.com/w_tafesse" target="_blank" class="btn">Twitter</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <p>© 2026 Wondmagegn T. Tirkaso. All rights reserved.</p>
+            <p class="disclaimer">The views expressed are my own and do not necessarily reflect those of any current or former employer.</p>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <img id="modalImage" src="" alt="">
+    </div>
+
+    <script>
+        // Publications data
+        const publications = [
+            {
+                title: "The Future of Antimicrobial Use in Livestock",
+                authors: "Tirkaso, W. T., Acosta, A., Nicolli, F., Van Boeckel, T., & Song, J.",
+                journal: "Nature Communications",
+                year: 2025,
+                volume: "16(1), 2469",
+                month: "April",
+                type: "peer-reviewed",
+                link: "https://www.nature.com/articles/s41467-025-56825-7",
+                abstract: "Governments worldwide have pledged to reduce antimicrobial use in the agri-food system. This study projects global livestock antibiotic use quantities through 2040 under various scenarios. This work indicates that under a business-as-usual scenario, global antibiotic use could reach ~143,481 tons by 2040, representing a 29.5% increase from the 2019 baseline of ~110,777 tons. A key contribution of this research is the development of the Livestock Biomass Conversion method, a novel indicator offering improved accuracy in estimating livestock biomass.",
+                image: "https://lh3.googleusercontent.com/sitesv/AA5AbUCUDym0Y5jK9rFUl8OxDDhTGYzqolBMEveNE4sCtFR-n5VcKNwKkkH-AwvMlxmdKinwzlmovYc1XFhFHfuGJB57CmePMyeeEO8YgvCCOR6tt69uZt5SuGA5xF4tVMvdRg_q-tHTGwpcHvFOgwJW3UjgE6sPnch-eROdjbY0_9VgMDxjtIlRzYBIpYkbIHAMQDeqqydwzbDUtJBriphvFjoWY1baq5g5R9y825Y=w1280",
+                imageCaption: "Global antimicrobial usage quantity (AMUQ) in tonnes for livestock under a BAU scenario from 2000 to 2040",
+                tags: ["One Health", "AMR", "Livestock", "Policy"]
+            },
+            {
+                title: "Does neighborhood matter? The effect of spatial proximity on farmers technical efficiency level",
+                authors: "Tirkaso, W. T., & Hailu, A.",
+                journal: "Agricultural Economics",
+                year: 2022,
+                volume: "1-13",
+                month: "February",
+                type: "peer-reviewed",
+                link: "https://doi.org/10.1111/agec.12702",
+                abstract: "This article examines the effects of neighborhood on the farmer's technical efficiency (TE) level, adopting a stochastic frontier and spatial Durbin regression models. Our study exploits a three-wave household-level panel data from the Ethiopian Rural Socioeconomic Survey (ERSS) collected between 2011 and 2015. We find that farmers have an average TE score of 53%, implying a substantial potential for improvement in the production level.",
+                image: "https://lh3.googleusercontent.com/sitesv/AA5AbUDbE7ZfjIst79ic_a506P_oRQESJmxu8EYy1CWMraL_-9n0WslO8ovPYYbompHf4ge1jnLPA4Fx-qvyaw-S79fZggmY5h6v6oEt08IvqfdXzb1Ex4Wqc_BxlQirH00D6pFhq4bVXqtnXjxnzlveI0yPPIW-J-v6UbnGa9O2PyJCZsUCFVjdGrc5HxlHthSlQnaL4Vn6ORij1HmJi9kl1jg3JpGf_gfl2zLlNZU=w1280",
+                imageCaption: "Regional distributions of average technical efficiency (TE) scores in Ethiopia",
+                tags: ["Agricultural Economics", "Productivity", "Spatial Analysis", "Ethiopia"]
+            },
+            {
+                title: "Costs and equity of uncertain greenhouse gas reductions: Fuel, food and negative emissions in Sweden",
+                authors: "Tirkaso, W. T., & Gren, I. M.",
+                journal: "Energy Economics",
+                year: 2021,
+                volume: "105638",
+                month: "December",
+                type: "peer-reviewed",
+                link: "https://doi.org/10.1016/j.eneco.2021.105638",
+                abstract: "Reducing emissions of greenhouse gases (GHG) by reduction of fuel and food consumption and by implementation of negative emissions has been suggested in both scientific literature and practice. This paper develops a static model with probabilistic emission constraints to calculate cost efficient emission reductions in the transportation and food sectors combined with negative emission creation in Sweden under uncertainty.",
+                image: "https://lh3.googleusercontent.com/sitesv/AA5AbUApJghEqJiC6DDaF9HIF5iCneWPRtAfTh99EsA46afG6XzrrqDyqgxp6naCHAJFV8DTsiGDa5Ms5D-ytxacwQTmk7xjfM11JUt4HvecDtnZk3Fu44wJ9TJhxpNqXWVvYxUDgcVVKKjbK1zfpDB4qaHM59nyrY1Bp6J8ATrmohsZhUFCSyuf4Ot7Ugl6Njh8MdeD9ioxou9raqgkp4ILoQMzmiz1T9mxs-osiUY=w1280",
+                imageCaption: "Minimum costs for reaching different reductions in total emissions",
+                tags: ["Climate", "Energy Economics", "Policy"]
+            },
+            {
+                title: "Social capital, economic development and carbon emissions: Empirical evidence from counties in Sweden",
+                authors: "Tirkaso, W. T., Marbuah, G., & Gren, I. M.",
+                journal: "Renewable and Sustainable Energy Reviews",
+                year: 2021,
+                volume: "152, 111691",
+                month: "December",
+                type: "peer-reviewed",
+                link: "https://doi.org/10.1016/j.rser.2021.111691",
+                abstract: "This paper examines if and how social capital explains Swedish county-level per capita CO2 emissions together with income in the period 2000–2017. A social capital composite index is constructed and different specifications of impacts on CO2 emissions of social capital and income and functional forms are tested.",
+                image: "https://lh3.googleusercontent.com/sitesv/AA5AbUCzkoEYf__9jyvLNroCZw0GzZHHc0tfc2I2mE0A8e-IFh7yLiDORwpwVxcuLu5dG6iVbbH3cub3TVr6wrLUiQElGIPdxeuoX63vx3oOyuu8cWvDMCHKuKYhogSCzU7VX2Rku8Jqf3_XVQsArhPImg5cQTzEys-NcDdCW257cAX0HlivUP8Fe6F-JbR-J2CLFdm-F0fgS_vyyiNdW-NSfpEuc3QahVXGZveKPYI=w1280",
+                imageCaption: "Spatial distribution of Swedish average CO2 emissions by sector",
+                tags: ["Environment", "Social Capital", "Sweden"]
+            },
+            {
+                title: "Evaluation of cost efficiency in hydropower-related biodiversity restoration projects in Sweden – a stochastic frontier approach",
+                authors: "Tirkaso, W. T., & Gren, I. M.",
+                journal: "Journal of Environmental Planning and Management",
+                year: 2021,
+                volume: "1-21",
+                month: "September",
+                type: "peer-reviewed",
+                link: "https://www.tandfonline.com/doi/citedby/10.1080/09640568.2021.1987865",
+                abstract: "Various restoration projects intended to mitigate the adverse ecological effects of hydropower plants have been implemented in different parts of the world. In this study, we estimated the cost efficiency level for different biodiversity mitigation measures in Sweden by using stochastic frontier analysis with data from 245 projects.",
+                image: "https://lh3.googleusercontent.com/sitesv/AA5AbUABnkleQH2nNRO42j17zA0mP5LDCQA-VUcyjnaeSj-r2Ug7Hzfpwso__k2giXpPCTkaPxzAlyL-CCjlX6xAP83sczDxNbDSeb5PTc9B5F7s2ptlRJzb9tQD_pgFVbCTd6PfgmLnnN_7r60cdFnFkDFKKCojLFT8Q_OabiBjzvwh9VYOWnY8uoE1cbwUYSZ5trogFiOZ82XTvQha08niznv-GjdTY6E5UcVh=w1280",
+                imageCaption: "Minimum cost per project at different ecological effects",
+                tags: ["Biodiversity", "Cost Efficiency", "Environmental Economics"]
+            },
+            {
+                title: "Road fuel demand and regional effects of carbon taxes in Sweden",
+                authors: "Tirkaso, W. T., & Gren, I. M.",
+                journal: "Energy Policy",
+                year: 2020,
+                volume: "144, 111648",
+                month: "September",
+                type: "peer-reviewed",
+                link: "https://doi.org/10.1016/j.enpol.2020.111648",
+                abstract: "This study estimated national and regional-level gasoline and diesel demand elasticities in Sweden using county-level panel data from 2001 to 2018. The estimated elasticities were used to calculate county cost effect of the Swedish CO2 emission reduction policy in the transport sector.",
+                tags: ["Energy Policy", "Carbon Tax", "Transport"]
+            },
+            {
+                title: "Examining coffee export performance in Eastern and Southern African countries: do bilateral trade relations matter?",
+                authors: "Tirkaso, W. T., & Nsabimana, A.",
+                journal: "Agrekon",
+                year: 2019,
+                volume: "59(1), 46–64",
+                month: "May",
+                type: "peer-reviewed",
+                link: "https://doi.org/10.1080/03031853.2019.1631864",
+                abstract: "This study examines the impact and implications of the East African Community and the Common Market for Eastern and Southern Africa preferential trade agreements on coffee export performance of eight East and Southern African countries using a static and dynamic gravity modelling framework for the period 1998–2013.",
+                tags: ["Trade", "Africa", "Agricultural Economics"]
+            },
+            {
+                title: "On the Impact of Rural Electrification: The Role of Complementary Factors",
+                authors: "Tirkaso, W. T.",
+                journal: "SSRN Working Paper",
+                year: 2023,
+                month: "March",
+                type: "working-paper",
+                link: "http://dx.doi.org/10.2139/ssrn.4377190",
+                tags: ["Development", "Infrastructure", "Electrification"]
+            },
+            {
+                title: "Cost-effective policy and incomplete information on policy implementation",
+                authors: "Tirkaso, W. T., Marbuah, G., & Gren, I. M.",
+                journal: "Towards a Fossil-Free Society - in the Stockholm-Mälar Region",
+                year: 2016,
+                volume: "134–152",
+                month: "September",
+                type: "book-chapter",
+                link: "https://publications.slu.se/?file=publ&id=79734",
+                tags: ["Policy", "Climate"]
+            }
+        ];
+
+        // Load and display publications
+        function loadPublications() {
+            const container = document.getElementById('publicationsList');
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const yearFilter = document.getElementById('yearFilter').value;
+            const typeFilter = document.getElementById('typeFilter').value;
+
+            const filtered = publications.filter(pub => {
+                const matchesSearch = !searchTerm || 
+                    pub.title.toLowerCase().includes(searchTerm) ||
+                    (pub.abstract && pub.abstract.toLowerCase().includes(searchTerm)) ||
+                    (pub.tags && pub.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
+                
+                const matchesYear = yearFilter === 'all' || pub.year.toString() === yearFilter;
+                const matchesType = typeFilter === 'all' || pub.type === typeFilter;
+
+                return matchesSearch && matchesYear && matchesType;
+            });
+
+            document.getElementById('pubCount').textContent = 
+                `Showing ${filtered.length} of ${publications.length} publications`;
+
+            container.innerHTML = filtered.map((pub, idx) => `
+                <div class="pub-card" onclick="togglePublication(${idx})">
+                    <div class="pub-meta">
+                        <span class="year-badge">${pub.year}</span>
+                        <span class="type-badge">${pub.type.replace('-', ' ')}</span>
+                    </div>
+                    
+                    <h3>${pub.title}</h3>
+                    <p class="pub-authors">${pub.authors}</p>
+                    <p class="pub-journal">${pub.journal}, ${pub.volume ? pub.volume + ', ' : ''}${pub.month || ''}</p>
+                    
+                    ${pub.tags ? `
+                        <div class="tags">
+                            ${pub.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    ` : ''}
+                    
+                    <div id="pub-details-${idx}" class="pub-details hidden">
+                        ${pub.abstract ? `
+                            <h4>Abstract</h4>
+                            <p>${pub.abstract}</p>
+                        ` : ''}
+                        
+                        ${pub.image ? `
+                            <img src="${pub.image}" alt="${pub.imageCaption || pub.title}" 
+                                 onclick="event.stopPropagation(); openModal('${pub.image}')">
+                            ${pub.imageCaption ? `<p class="image-caption">${pub.imageCaption}</p>` : ''}
+                        ` : ''}
+                        
+                        ${pub.link ? `
+                            <a href="${pub.link}" target="_blank" class="pub-link" 
+                               onclick="event.stopPropagation()">📄 Read Full Paper</a>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function togglePublication(idx) {
+            const details = document.getElementById(`pub-details-${idx}`);
+            details.classList.toggle('hidden');
+        }
+
+        function filterPublications() {
+            loadPublications();
+        }
+
+        function exportBibTeX() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const yearFilter = document.getElementById('yearFilter').value;
+            const typeFilter = document.getElementById('typeFilter').value;
+
+            const filtered = publications.filter(pub => {
+                const matchesSearch = !searchTerm || 
+                    pub.title.toLowerCase().includes(searchTerm) ||
+                    (pub.abstract && pub.abstract.toLowerCase().includes(searchTerm)) ||
+                    (pub.tags && pub.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
+                
+                const matchesYear = yearFilter === 'all' || pub.year.toString() === yearFilter;
+                const matchesType = typeFilter === 'all' || pub.type === typeFilter;
+
+                return matchesSearch && matchesYear && matchesType;
+            });
+
+            const bibtex = filtered.map(pub => {
+                const key = `${pub.authors.split(',')[0].split(' ').pop().toLowerCase()}${pub.year}`;
+                return `@article{${key},
+  author = {${pub.authors}},
+  title = {${pub.title}},
+  journal = {${pub.journal}},
+  year = {${pub.year}},
+  volume = {${pub.volume || ''}},
+  doi = {${pub.link || ''}}
+}`;
+            }).join('\n\n');
+
+            const blob = new Blob([bibtex], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'publications.bib';
+            a.click();
+        }
+
+        function scrollTo(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function openModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+        }
+
+        // Initialize
+        window.onload = function() {
+            loadPublications();
+        };
+    </script>
+</body>
+</html>
