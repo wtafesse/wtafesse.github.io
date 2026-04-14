@@ -154,6 +154,27 @@
             word-break: break-all;
         }
 
+        /* Message Button in Sidebar */
+        .message-button {
+            display: block;
+            padding: 1rem;
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(26, 58, 82, 0.2);
+        }
+
+        .message-button:hover {
+            background: linear-gradient(135deg, #d97d54 0%, #c76d44 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 125, 84, 0.3);
+        }
+
         h2 {
             font-family: 'Crimson Pro', serif;
             font-size: 2.5rem;
@@ -917,10 +938,9 @@
                         <a href="https://twitter.com/w_tafesse" target="_blank">Twitter</a>
                     </div>
 
-                    <div class="contact-box">
-                        <div style="margin-bottom: 0.75rem; font-weight: 600;">📧 Email</div>
-                        <div style="margin-bottom: 0.25rem;"><a href="mailto:wondewin@gmail.com">wondewin@gmail.com</a></div>
-                    </div>
+                    <a href="mailto:wondewin@gmail.com" class="message-button">
+                        📧 Send Message
+                    </a>
                 </div>
 
                 <div class="about-text">
