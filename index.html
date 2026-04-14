@@ -181,6 +181,78 @@
             color: #333;
         }
 
+        /* CV DOWNLOAD BUTTON IN ABOUT SECTION */
+        .cv-download-box {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 16px rgba(26, 58, 82, 0.2);
+        }
+
+        .cv-download-box .cv-text {
+            flex: 1;
+            color: white;
+        }
+
+        .cv-download-box .cv-text h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .cv-download-box .cv-text p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .cv-download-box .cv-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cv-btn {
+            padding: 0.9rem 1.8rem;
+            background: #d97d54;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(217, 125, 84, 0.3);
+        }
+
+        .cv-btn:hover {
+            background: #c76d44;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 125, 84, 0.4);
+        }
+
+        .cv-btn-secondary {
+            background: white;
+            color: #1a3a52;
+        }
+
+        .cv-btn-secondary:hover {
+            background: #f5f5f5;
+            color: #d97d54;
+        }
+
         section {
             margin-bottom: 5rem;
         }
@@ -357,8 +429,7 @@
 
         .engagement-card,
         .teaching-card,
-        .conference-box,
-        .resources-box {
+        .conference-box {
             background: white;
             padding: 2rem;
             border-radius: 12px;
@@ -384,8 +455,7 @@
             flex-wrap: wrap;
         }
 
-        .engagement-card p,
-        .resources-box p {
+        .engagement-card p {
             font-size: 1.05rem;
             line-height: 1.8;
             color: #333;
@@ -446,6 +516,285 @@
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
+        }
+
+        /* CREATIVE RESOURCES SECTION */
+        .resources-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .resources-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #1a3a52 0%, #d97d54 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .resources-header p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .resource-category-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .resource-category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #1a3a52, #d97d54);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .resource-category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .resource-category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(26, 58, 82, 0.15);
+        }
+
+        .resource-card-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            filter: grayscale(0.3);
+            transition: filter 0.3s ease;
+        }
+
+        .resource-category-card:hover .resource-icon {
+            filter: grayscale(0);
+        }
+
+        .resource-card-header h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-card-header p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .resource-card-body {
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        .resource-subgroup {
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-subgroup:last-child {
+            margin-bottom: 0;
+        }
+
+        .resource-subgroup h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1a3a52;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+            opacity: 0.7;
+        }
+
+        .resource-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .resource-list li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .resource-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #d97d54;
+            font-weight: 700;
+            transition: transform 0.2s ease;
+        }
+
+        .resource-list li:hover::before {
+            transform: translateX(4px);
+        }
+
+        .resource-list a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            transition: color 0.2s ease;
+            display: block;
+        }
+
+        .resource-list a:hover {
+            color: #d97d54;
+        }
+
+        .resource-spotlight {
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-spotlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .resource-spotlight h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .resource-spotlight p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .resource-spotlight-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .resource-spotlight-btn {
+            padding: 1rem 2rem;
+            background: #d97d54;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 16px rgba(217, 125, 84, 0.3);
+        }
+
+        .resource-spotlight-btn:hover {
+            background: #c76d44;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(217, 125, 84, 0.4);
+        }
+
+        .resource-spotlight-btn.secondary {
+            background: white;
+            color: #1a3a52;
+        }
+
+        .resource-spotlight-btn.secondary:hover {
+            background: #f5f5f5;
+            color: #d97d54;
+        }
+
+        .resource-tools {
+            background: #fff8f0;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .resource-tools h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .tool-badge {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .tool-badge:hover {
+            transform: translateY(-4px);
+            border-color: #d97d54;
+            box-shadow: 0 8px 24px rgba(217, 125, 84, 0.15);
+        }
+
+        .tool-badge .tool-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1a3a52;
+            margin-bottom: 0.25rem;
+        }
+
+        .tool-badge .tool-desc {
+            font-size: 0.8rem;
+            color: #666;
         }
 
         footer {
@@ -517,6 +866,18 @@
             .profile-sidebar {
                 position: static;
             }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .resource-spotlight {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
@@ -576,6 +937,22 @@
                     <p>Currently, I work as an economist at the United Nations Food and Agriculture Organization (FAO), where I contribute to global and country-level analysis on antimicrobial resistance economics, livestock productivity, climate mitigation and adaptation, and agrifood investment strategies. My work links micro-level evidence with economy-wide modelling to understand trade-offs, identify priority investments, and provide practical inputs for policymaking in low- and middle-income countries, especially in settings facing structural constraints and high uncertainty.</p>
 
                     <p>My research is published in journals including Nature Communications, Agricultural Economics, Energy Economics, and Energy Policy.</p>
+
+                    <!-- CV DOWNLOAD BOX -->
+                    <div class="cv-download-box">
+                        <div class="cv-text">
+                            <h3>Curriculum Vitae</h3>
+                            <p>Download my complete academic and professional CV, or view my publications on Google Scholar.</p>
+                        </div>
+                        <div class="cv-buttons">
+                            <a href="/files/Wondmagegn_Tirkaso_CV.pdf" class="cv-btn" target="_blank" rel="noopener noreferrer">
+                                📄 Download CV
+                            </a>
+                            <a href="https://scholar.google.se/citations?user=bwxyUQ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="cv-btn cv-btn-secondary">
+                                📚 Google Scholar
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -644,43 +1021,42 @@
         <section id="teaching">
             <h2>Teaching Experience</h2>
             <div class="teaching-card">
-              <h3>
-                  <a href="https://www.slu.se/en/" target="_blank" rel="noopener noreferrer" class="institution-link">
-                      Swedish University of Agricultural Sciences (SLU)
-                  </a>
-              </h3>
+                <h3>
+                    <a href="https://www.slu.se/en/" target="_blank" rel="noopener noreferrer" class="institution-link">
+                        Swedish University of Agricultural Sciences (SLU)
+                    </a>
                 </h3>
                 <p style="font-style: italic; color: #666; margin-bottom: 1rem;">Department of Economics</p>
                 <div class="course-item">
-            <span style="font-weight: 500; color: #333;">Microeconomics (NA0163)</span>
-            <span style="font-size: 0.85rem; color: #666;">Spring 2016</span>
-        </div>
+                    <span style="font-weight: 500; color: #333;">Microeconomics (NA0163)</span>
+                    <span style="font-size: 0.85rem; color: #666;">Spring 2016</span>
+                </div>
 
-        <div class="course-item">
-            <span style="font-weight: 500; color: #333;">Environmental Economics – Review Course (NA0120)</span>
-            <span style="font-size: 0.85rem; color: #666;">Spring 2016</span>
-        </div>
-    </div>
+                <div class="course-item">
+                    <span style="font-weight: 500; color: #333;">Environmental Economics – Review Course (NA0120)</span>
+                    <span style="font-size: 0.85rem; color: #666;">Spring 2016</span>
+                </div>
+            </div>
 
-    <div class="teaching-card">
-        <h3>
-    <a href="https://swedishprogram.org/" target="_blank" rel="noopener noreferrer" class="institution-link">
-        Stockholm School of Economics (SSE)
-    </a>
-        </h3>
-        <p style="font-style: italic; color: #666; margin-bottom: 1rem;">The Swedish Program</p>
+            <div class="teaching-card">
+                <h3>
+                    <a href="https://swedishprogram.org/" target="_blank" rel="noopener noreferrer" class="institution-link">
+                        Stockholm School of Economics (SSE)
+                    </a>
+                </h3>
+                <p style="font-style: italic; color: #666; margin-bottom: 1rem;">The Swedish Program</p>
 
-        <div class="course-item">
-            <span style="font-weight: 500; color: #333;">Energy and Environmental Economics</span>
-            <span style="font-size: 0.85rem; color: #666;">Fall 2021</span>
-        </div>
+                <div class="course-item">
+                    <span style="font-weight: 500; color: #333;">Energy and Environmental Economics</span>
+                    <span style="font-size: 0.85rem; color: #666;">Fall 2021</span>
+                </div>
 
-        <div class="course-item">
-            <span style="font-weight: 500; color: #333;">Energy and Environmental Economics</span>
-            <span style="font-size: 0.85rem; color: #666;">Spring 2022</span>
-        </div>
-    </div>
-</section>
+                <div class="course-item">
+                    <span style="font-weight: 500; color: #333;">Energy and Environmental Economics</span>
+                    <span style="font-size: 0.85rem; color: #666;">Spring 2022</span>
+                </div>
+            </div>
+        </section>
 
         <section id="conferences">
             <h2>Conferences & Presentations</h2>
@@ -761,112 +1137,183 @@
         </section>
 
         <section id="resources">
-    <h2>Resources</h2>
-
-    <div class="resources-box">
-        <p class="resources-intro">
-         Below you will find open-access datasets, replication repositories, software tutorials, and research resources relevant to applied economics and quantitative policy analysis.
-        </p>
-
-        <div class="resource-category">
-            <h3>Open Access Data Sources</h3>
-
-            <div class="resource-subgroup">
-                <h4>Household &amp; Socioeconomic Data</h4>
-                <ul class="resource-list">
-                    <li><a href="https://www.worldbank.org/en/programs/lsms" target="_blank" rel="noopener noreferrer">The World Bank Living Standards Measurement Study Data (LSMS)</a></li>
-                    <li><a href="https://www.ipums.org/" target="_blank" rel="noopener noreferrer">IPUMS DHS data</a></li>
-                    <li><a href="https://www.younglives.org.uk/" target="_blank" rel="noopener noreferrer">Young Lives Household and child survey (University of Oxford)</a></li>
-                </ul>
+            <div class="resources-header">
+                <h2>Research Resources</h2>
+                <p>A curated collection of open-access datasets, software tutorials, and analytical tools for applied economics and quantitative policy research.</p>
             </div>
 
-            <div class="resource-subgroup">
-                <h4>Environmental &amp; Spatial Data</h4>
-                <ul class="resource-list">
-                    <li><a href="https://ngdc.noaa.gov/" target="_blank" rel="noopener noreferrer">National Centers for Environmental Information (NCEI) spatial database</a></li>
-                    <li><a href="https://datacatalog.worldbank.org/search/dataset/0038272/derived-map-of-global-electricity-transmission-and-distribution-lines" target="_blank" rel="noopener noreferrer">Derived Map of Global Electricity Transmission and Distribution Lines</a></li>
-                    <li><a href="https://www-personal.umich.edu/~jvmalik/electricity/" target="_blank" rel="noopener noreferrer">High-Resolution Electricity Access Indicators Dataset</a></li>
-                    <li><a href="https://www.reidcurry.net/global-road-map" target="_blank" rel="noopener noreferrer">The Global Roads Inventory Project</a></li>
-                    <li><a href="https://sedac.ciesin.columbia.edu/data/set/groads-global-roads-open-access-v1" target="_blank" rel="noopener noreferrer">Global Roads Open Access Data Set (gROADS), v1 (1980–2010)</a></li>
-                </ul>
+            <!-- Spotlight Section -->
+            <div class="resource-spotlight">
+                <h3>📚 Essential Academic Resources</h3>
+                <p>Access my complete CV and explore my publications indexed on Google Scholar</p>
+                <div class="resource-spotlight-buttons">
+                    <a href="/files/Wondmagegn_Tirkaso_CV.pdf" class="resource-spotlight-btn" target="_blank" rel="noopener noreferrer">
+                        📄 Download Full CV
+                    </a>
+                    <a href="https://scholar.google.se/citations?user=bwxyUQ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="resource-spotlight-btn secondary">
+                        🎓 Google Scholar Profile
+                    </a>
+                </div>
             </div>
 
-            <div class="resource-subgroup">
-                <h4>Experimental &amp; Policy Research Datasets</h4>
-                <ul class="resource-list">
-                    <li><a href="https://www.pep-net.org/research-resources" target="_blank" rel="noopener noreferrer">Experimental Research (PIERI) Datasets</a></li>
-                    <li><a href="https://osf.io/3sn2k/" target="_blank" rel="noopener noreferrer">International Survey on Coronavirus</a></li>
-                    <li><a href="https://ourworldindata.org/covid-cases" target="_blank" rel="noopener noreferrer">Country-by-country data on confirmed COVID-19 cases</a></li>
-                </ul>
+            <!-- Statistical Tools Showcase -->
+            <div class="resource-tools">
+                <h3>🛠️ Statistical & Programming Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-badge">
+                        <div class="tool-name">STATA</div>
+                        <div class="tool-desc">Econometrics</div>
+                    </div>
+                    <div class="tool-badge">
+                        <div class="tool-name">R</div>
+                        <div class="tool-desc">Data Science</div>
+                    </div>
+                    <div class="tool-badge">
+                        <div class="tool-name">Python</div>
+                        <div class="tool-desc">Analysis</div>
+                    </div>
+                    <div class="tool-badge">
+                        <div class="tool-name">SQL</div>
+                        <div class="tool-desc">Databases</div>
+                    </div>
+                    <div class="tool-badge">
+                        <div class="tool-name">GitHub</div>
+                        <div class="tool-desc">Version Control</div>
+                    </div>
+                    <div class="tool-badge">
+                        <div class="tool-name">Jupyter</div>
+                        <div class="tool-desc">Notebooks</div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="resource-category">
-            <h3>Replicable Papers &amp; Code Repositories</h3>
-            <ul class="resource-list">
-                <li><a href="https://www.openicpsr.org/openicpsr/search/studies?q=American%20Economic%20Association" target="_blank" rel="noopener noreferrer">OPENICPSR / American Economic Association</a></li>
-                <li><a href="https://dataverse.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a></li>
-                <li><a href="https://dataverse.harvard.edu/dataverse/restat" target="_blank" rel="noopener noreferrer">Review of Economics and Statistics Dataverse – replication data and code</a></li>
-            </ul>
-        </div>
+            <!-- Resource Cards Grid -->
+            <div class="resources-grid">
+                <!-- Data Sources Card -->
+                <div class="resource-category-card">
+                    <div class="resource-card-header">
+                        <span class="resource-icon">📊</span>
+                        <h3>Open Data Sources</h3>
+                        <p>Comprehensive household, environmental, and policy datasets</p>
+                    </div>
+                    <div class="resource-card-body">
+                        <div class="resource-subgroup">
+                            <h4>Household & Socioeconomic</h4>
+                            <ul class="resource-list">
+                                <li><a href="https://www.worldbank.org/en/programs/lsms" target="_blank" rel="noopener noreferrer">World Bank LSMS Data</a></li>
+                                <li><a href="https://www.ipums.org/" target="_blank" rel="noopener noreferrer">IPUMS DHS Database</a></li>
+                                <li><a href="https://www.younglives.org.uk/" target="_blank" rel="noopener noreferrer">Young Lives Survey</a></li>
+                            </ul>
+                        </div>
 
-        <div class="resource-category">
-            <h3>Statistical Software &amp; Tutorials</h3>
+                        <div class="resource-subgroup">
+                            <h4>Environmental & Spatial</h4>
+                            <ul class="resource-list">
+                                <li><a href="https://ngdc.noaa.gov/" target="_blank" rel="noopener noreferrer">NCEI Spatial Database</a></li>
+                                <li><a href="https://datacatalog.worldbank.org/search/dataset/0038272/derived-map-of-global-electricity-transmission-and-distribution-lines" target="_blank" rel="noopener noreferrer">Global Electricity Lines</a></li>
+                                <li><a href="https://www-personal.umich.edu/~jvmalik/electricity/" target="_blank" rel="noopener noreferrer">Electricity Access Data</a></li>
+                            </ul>
+                        </div>
 
-            <div class="resource-subgroup">
-                <h4>STATA</h4>
-                <ul class="resource-list">
-                    <li><a href="https://stats.oarc.ucla.edu/stata/" target="_blank" rel="noopener noreferrer">Stata Learning Modules (UCLA)</a></li>
-                    <li><a href="https://www.stata.com/links/video-tutorials/" target="_blank" rel="noopener noreferrer">Video tutorials (StataCorp LLC)</a></li>
-                </ul>
+                        <div class="resource-subgroup">
+                            <h4>Experimental & Policy</h4>
+                            <ul class="resource-list">
+                                <li><a href="https://www.pep-net.org/research-resources" target="_blank" rel="noopener noreferrer">PIERI Datasets</a></li>
+                                <li><a href="https://osf.io/3sn2k/" target="_blank" rel="noopener noreferrer">COVID-19 Survey Data</a></li>
+                                <li><a href="https://ourworldindata.org/covid-cases" target="_blank" rel="noopener noreferrer">Our World in Data</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STATA Resources Card -->
+                <div class="resource-category-card">
+                    <div class="resource-card-header">
+                        <span class="resource-icon">📈</span>
+                        <h3>STATA Resources</h3>
+                        <p>Learning modules and video tutorials for econometric analysis</p>
+                    </div>
+                    <div class="resource-card-body">
+                        <ul class="resource-list">
+                            <li><a href="https://stats.oarc.ucla.edu/stata/" target="_blank" rel="noopener noreferrer">STATA Learning Modules (UCLA)</a></li>
+                            <li><a href="https://www.stata.com/links/video-tutorials/" target="_blank" rel="noopener noreferrer">Video Tutorials (StataCorp)</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- R, Python & Programming Card -->
+                <div class="resource-category-card">
+                    <div class="resource-card-header">
+                        <span class="resource-icon">💻</span>
+                        <h3>R, Python & GitHub</h3>
+                        <p>Modern programming tools for data science and economics</p>
+                    </div>
+                    <div class="resource-card-body">
+                        <ul class="resource-list">
+                            <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks.html" target="_blank" rel="noopener noreferrer">Jupyter Notebooks for Dev</a></li>
+                            <li><a href="https://python.quantecon.org/" target="_blank" rel="noopener noreferrer">QuantEcon with Python</a></li>
+                            <li><a href="https://stats.oarc.ucla.edu/r/" target="_blank" rel="noopener noreferrer">R Learning Modules (UCLA)</a></li>
+                            <li><a href="https://carpentries.org/" target="_blank" rel="noopener noreferrer">The Carpentries</a></li>
+                            <li><a href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrer">Python Tutorial</a></li>
+                            <li><a href="https://datascienceplus.com/r-python-data-science/" target="_blank" rel="noopener noreferrer">R & Python for Data Science</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Replication & Code Card -->
+                <div class="resource-category-card">
+                    <div class="resource-card-header">
+                        <span class="resource-icon">🔬</span>
+                        <h3>Replication Materials</h3>
+                        <p>Open code and data repositories from published research</p>
+                    </div>
+                    <div class="resource-card-body">
+                        <ul class="resource-list">
+                            <li><a href="https://www.openicpsr.org/openicpsr/search/studies?q=American%20Economic%20Association" target="_blank" rel="noopener noreferrer">AEA OpenICPSR</a></li>
+                            <li><a href="https://dataverse.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a></li>
+                            <li><a href="https://dataverse.harvard.edu/dataverse/restat" target="_blank" rel="noopener noreferrer">REstat Dataverse</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Specialized Methods Card -->
+                <div class="resource-category-card">
+                    <div class="resource-card-header">
+                        <span class="resource-icon">🎯</span>
+                        <h3>Specialized Methods</h3>
+                        <p>Advanced econometric techniques and packages</p>
+                    </div>
+                    <div class="resource-card-body">
+                        <ul class="resource-list">
+                            <li><a href="https://rdpackages.github.io/" target="_blank" rel="noopener noreferrer">Regression Discontinuity</a></li>
+                            <li><a href="https://pjbartlein.github.io/REarthSysSci/netCDF.html" target="_blank" rel="noopener noreferrer">netCDF in R</a></li>
+                            <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks/Stata-and-R-in-Jupyter.html" target="_blank" rel="noopener noreferrer">STATA & R in Jupyter</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Academic Skills Card -->
+                <div class="resource-category-card">
+                    <div class="resource-card-header">
+                        <span class="resource-icon">✍️</span>
+                        <h3>Academic Writing</h3>
+                        <p>Best practices for research papers and presentations</p>
+                    </div>
+                    <div class="resource-card-body">
+                        <ul class="resource-list">
+                            <li><a href="https://writingcenter.fas.harvard.edu/pages/resources" target="_blank" rel="noopener noreferrer">Harvard Writing Resources</a></li>
+                            <li><a href="https://www.ryanbedwards.com/post/writing-seminar-discussant-tips/" target="_blank" rel="noopener noreferrer">Seminar & Discussant Tips</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="resource-subgroup">
-                <h4>R, SQL, Python, &amp; GitHub</h4>
-                <ul class="resource-list">
-                    <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks.html" target="_blank" rel="noopener noreferrer">Development Microeconomics with Jupyter Notebooks</a></li>
-                    <li><a href="https://python.quantecon.org/" target="_blank" rel="noopener noreferrer">Quantitative Economics with Python</a></li>
-                    <li><a href="https://stats.oarc.ucla.edu/r/" target="_blank" rel="noopener noreferrer">R Learning Modules (UCLA)</a></li>
-                    <li><a href="https://carpentries.org/" target="_blank" rel="noopener noreferrer">R, SQL, Python and GitHub - The Carpentries</a></li>
-                    <li><a href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrer">Python Tutorial</a></li>
-                    <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks/Stata-and-R-in-Jupyter.html" target="_blank" rel="noopener noreferrer">Stata and R in a Jupyter notebook</a></li>
-                    <li><a href="https://datascienceplus.com/r-python-data-science/" target="_blank" rel="noopener noreferrer">R &amp; Python for Data Science</a></li>
-                    <li><a href="https://pjbartlein.github.io/REarthSysSci/netCDF.html" target="_blank" rel="noopener noreferrer">netCDF in R</a></li>
-                </ul>
+            <div style="margin-top: 3rem; padding: 1.5rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #1a3a52;">
+                <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0;">
+                    <strong>Note:</strong> These resources are curated for students, researchers, and practitioners in applied economics, development, agriculture, environment, and policy analysis. All links lead to publicly accessible materials and open-source tools.
+                </p>
             </div>
-        </div>
-
-        <div class="resource-category">
-            <h3>Specialized Econometric Methods</h3>
-            <ul class="resource-list">
-                <li><a href="https://rdpackages.github.io/" target="_blank" rel="noopener noreferrer">Regression Discontinuity Designs Software Packages</a></li>
-            </ul>
-        </div>
-
-        <div class="resource-category">
-            <h3>Other Resources</h3>
-
-            <div class="resource-subgroup">
-                <h4>Writing, Seminars, and Discussant Tips</h4>
-                <ul class="resource-list">
-                    <li><a href="https://writingcenter.fas.harvard.edu/pages/resources" target="_blank" rel="noopener noreferrer">Best Practices for Writing Research Papers</a></li>
-                    <li><a href="https://www.ryanbedwards.com/post/writing-seminar-discussant-tips/" target="_blank" rel="noopener noreferrer">Writing, Seminar, being discussant (Tips)</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="resource-actions">
-            <a href="/files/Wondmagegn_Tirkaso_CV.pdf" class="btn" target="_blank" rel="noopener noreferrer">📄 Download CV</a>
-            <a href="https://scholar.google.se/citations?user=bwxyUQ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn">📚 Google Scholar Profile</a>
-        </div>
-
-        <div class="resource-note">
-            <strong>Note:</strong> These links are provided as a curated research support page for students,
-            researchers, and practitioners working in applied economics, development, agriculture,
-            environment, and policy analysis.
-        </div>
-    </div>
-</section>
+        </section>
 
         <section id="contact">
             <h2>Contact</h2>
