@@ -1157,161 +1157,253 @@
         </section>
 
         <section id="resources">
-            <div class="resources-header">
-                <h2>Research Resources</h2>
-                <p>A curated collection of open-access datasets, software tutorials, and analytical tools for applied economics and quantitative policy research.</p>
+    <div class="resources-header">
+        <h2>Research Resources</h2>
+        <p>A curated collection of open-access datasets, software tutorials, and analytical tools for applied economics and quantitative policy research.</p>
+    </div>
+
+    <!-- Statistical Tools Showcase -->
+    <div class="resource-tools">
+        <h3>🛠️ Statistical & Programming Tools</h3>
+        <div class="tools-grid">
+            <div class="tool-badge">
+                <div class="tool-name">STATA</div>
+                <div class="tool-desc">Econometrics & Panel Data</div>
             </div>
-
-            <!-- Statistical Tools Showcase -->
-            <div class="resource-tools">
-                <h3> Statistical & Programming Tools</h3>
-                <div class="tools-grid">
-                    <div class="tool-badge">
-                        <div class="tool-name">STATA</div>
-                        <div class="tool-desc">Econometrics</div>
-                    </div>
-                    <div class="tool-badge">
-                        <div class="tool-name">R</div>
-                        <div class="tool-desc">Econometrics and Data Science</div>
-                    </div>
-                    <div class="tool-badge">
-                        <div class="tool-name">Python</div>
-                        <div class="tool-desc">Econometrics and and Data Science</div>
-                    </div>
-                      <div class="tool-badge">
-                        <div class="tool-name">GAMS</div>
-                        <div class="tool-desc">Modeling and Simulation</div>
-                    </div>
-                </div>
+            <div class="tool-badge">
+                <div class="tool-name">R</div>
+                <div class="tool-desc">Statistical Computing</div>
             </div>
+            <div class="tool-badge">
+                <div class="tool-name">Python</div>
+                <div class="tool-desc">Data Science & ML</div>
+            </div>
+            <div class="tool-badge">
+                <div class="tool-name">GAMS</div>
+                <div class="tool-desc">Economic Modeling</div>
+            </div>
+        </div>
+    </div>
 
-            <!-- Resource Cards Grid -->
-            <div class="resources-grid">
-                <!-- Data Sources Card -->
-                <div class="resource-category-card">
-                    <div class="resource-card-header">
-                        <span class="resource-icon">📊</span>
-                        <h3>Open Data Sources</h3>
-                        <p>Comprehensive household, environmental, and policy datasets</p>
-                    </div>
-                    <div class="resource-card-body">
-                        <div class="resource-subgroup">
-                            <h4>Household & Socioeconomic</h4>
-                            <ul class="resource-list">
-                                <li><a href="https://www.worldbank.org/en/programs/lsms" target="_blank" rel="noopener noreferrer">World Bank LSMS Data</a></li>
-                                <li><a href="https://www.ipums.org/" target="_blank" rel="noopener noreferrer">IPUMS DHS Database</a></li>
-                                <li><a href="https://www.younglives.org.uk/" target="_blank" rel="noopener noreferrer">Young Lives Survey</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="resource-subgroup">
-                            <h4>Environmental & Spatial</h4>
-                            <ul class="resource-list">
-                                <li><a href="https://ngdc.noaa.gov/" target="_blank" rel="noopener noreferrer">NCEI Spatial Database</a></li>
-                                <li><a href="https://datacatalog.worldbank.org/search/dataset/0038272/derived-map-of-global-electricity-transmission-and-distribution-lines" target="_blank" rel="noopener noreferrer">Global Electricity Lines</a></li>
-                                <li><a href="https://www-personal.umich.edu/~jvmalik/electricity/" target="_blank" rel="noopener noreferrer">Electricity Access Data</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="resource-subgroup">
-                            <h4>Experimental & Policy</h4>
-                            <ul class="resource-list">
-                                <li><a href="https://www.pep-net.org/research-resources" target="_blank" rel="noopener noreferrer">PIERI Datasets</a></li>
-                                <li><a href="https://osf.io/3sn2k/" target="_blank" rel="noopener noreferrer">COVID-19 Survey Data</a></li>
-                                <li><a href="https://ourworldindata.org/covid-cases" target="_blank" rel="noopener noreferrer">Our World in Data</a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Resource Cards Grid - Reorganized by Software -->
+    <div class="resources-grid">
+        <!-- STATA Resources Card -->
+        <div class="resource-category-card">
+            <div class="resource-card-header">
+                <span class="resource-icon">📊</span>
+                <h3>STATA Ecosystem</h3>
+                <p>Econometric analysis, panel data, and productivity estimation</p>
+            </div>
+            <div class="resource-card-body">
+                <div class="resource-subgroup">
+                    <h4>Learning Resources</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://stats.oarc.ucla.edu/stata/" target="_blank" rel="noopener noreferrer">STATA Learning Modules (UCLA)</a></li>
+                        <li><a href="https://www.stata.com/links/video-tutorials/" target="_blank" rel="noopener noreferrer">Video Tutorials (StataCorp)</a></li>
+                        <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks/Stata-and-R-in-Jupyter.html" target="_blank" rel="noopener noreferrer">STATA & R in Jupyter</a></li>
+                    </ul>
                 </div>
 
-                <!-- STATA Resources Card -->
-                <div class="resource-category-card">
-                    <div class="resource-card-header">
-                        <span class="resource-icon">📈</span>
-                        <h3>STATA Resources</h3>
-                        <p>Learning modules and video tutorials for econometric analysis</p>
-                    </div>
-                    <div class="resource-card-body">
-                        <ul class="resource-list">
-                            <li><a href="https://stats.oarc.ucla.edu/stata/" target="_blank" rel="noopener noreferrer">STATA Learning Modules (UCLA)</a></li>
-                            <li><a href="https://pjbartlein.github.io/REarthSysSci/netCDF.html" target="_blank" rel="noopener noreferrer">netCDF in R</a></li>
-                            <li><a href="https://www.stata.com/links/video-tutorials/" target="_blank" rel="noopener noreferrer">Video Tutorials (StataCorp)</a></li>
-                            <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks/Stata-and-R-in-Jupyter.html" target="_blank" rel="noopener noreferrer">STATA & R in Jupyter</a></li>
-                        </ul>
-                    </div>
+                <div class="resource-subgroup">
+                    <h4>Recommended Datasets (STATA-friendly)</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://www.worldbank.org/en/programs/lsms" target="_blank" rel="noopener noreferrer">World Bank LSMS Data</a></li>
+                        <li><a href="https://www.younglives.org.uk/" target="_blank" rel="noopener noreferrer">Young Lives Survey</a></li>
+                        <li><a href="https://www.pep-net.org/research-resources" target="_blank" rel="noopener noreferrer">PEP-PIERI Datasets</a></li>
+                    </ul>
                 </div>
 
-                <!-- R, Python & Programming Card -->
-                <div class="resource-category-card">
-                    <div class="resource-card-header">
-                        <span class="resource-icon">💻</span>
-                        <h3>R, Python & GitHub</h3>
-                        <p>Modern programming tools for data science and economics</p>
-                    </div>
-                    <div class="resource-card-body">
-                        <ul class="resource-list">
-                            <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks.html" target="_blank" rel="noopener noreferrer">Jupyter Notebooks for Dev</a></li>
-                            <li><a href="https://python.quantecon.org/" target="_blank" rel="noopener noreferrer">QuantEcon with Python</a></li>
-                            <li><a href="https://stats.oarc.ucla.edu/r/" target="_blank" rel="noopener noreferrer">R Learning Modules (UCLA)</a></li>
-                            <li><a href="https://carpentries.org/" target="_blank" rel="noopener noreferrer">The Carpentries</a></li>
-                            <li><a href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrer">Python Tutorial</a></li>
-                            <li><a href="https://datascienceplus.com/r-python-data-science/" target="_blank" rel="noopener noreferrer">R & Python for Data Science</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Replication & Code Card -->
-                <div class="resource-category-card">
-                    <div class="resource-card-header">
-                        <span class="resource-icon">🔬</span>
-                        <h3>Replication Materials</h3>
-                        <p>Open code and data repositories from published research</p>
-                    </div>
-                    <div class="resource-card-body">
-                        <ul class="resource-list">
-                            <li><a href="https://www.openicpsr.org/openicpsr/search/studies?q=American%20Economic%20Association" target="_blank" rel="noopener noreferrer">AEA OpenICPSR</a></li>
-                            <li><a href="https://dataverse.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a></li>
-                            <li><a href="https://dataverse.harvard.edu/dataverse/restat" target="_blank" rel="noopener noreferrer">REstat Dataverse</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Specialized Methods Card -->
-                <div class="resource-category-card">
-                    <div class="resource-card-header">
-                        <span class="resource-icon">🎯</span>
-                        <h3>Specialized Econometric Methods</h3>
-                        <p>Advanced econometric techniques and packages</p>
-                    </div>
-                    <div class="resource-card-body">
-                        <ul class="resource-list">
-                            <li><a href="https://rdpackages.github.io/" target="_blank" rel="noopener noreferrer">Regression Discontinuity</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Academic Skills Card -->
-                <div class="resource-category-card">
-                    <div class="resource-card-header">
-                        <span class="resource-icon">✍️</span>
-                        <h3>Academic Writing</h3>
-                        <p>Best practices for research papers and presentations</p>
-                    </div>
-                    <div class="resource-card-body">
-                        <ul class="resource-list">
-                            <li><a href="https://writingcenter.fas.harvard.edu/pages/resources" target="_blank" rel="noopener noreferrer">Harvard Writing Resources</a></li>
-                            <li><a href="https://www.ryanbedwards.com/post/writing-seminar-discussant-tips/" target="_blank" rel="noopener noreferrer">Seminar & Discussant Tips</a></li>
-                        </ul>
-                    </div>
+                <div class="resource-subgroup">
+                    <h4>Specialized Packages</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://rdpackages.github.io/" target="_blank" rel="noopener noreferrer">Regression Discontinuity (rdrobust)</a></li>
+                    </ul>
                 </div>
             </div>
+        </div>
 
-            <div style="margin-top: 3rem; padding: 1.5rem; background: #f8f9fa; border-radius: 12px; border-left: 4px solid #1a3a52;">
-                <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0;">
-                    <strong>Note:</strong> These resources are curated for students, researchers, and practitioners in applied economics, development, agriculture, environment, and policy analysis. All links lead to publicly accessible materials and open-source tools.
+        <!-- R Resources Card -->
+        <div class="resource-category-card">
+            <div class="resource-card-header">
+                <span class="resource-icon">📈</span>
+                <h3>R Ecosystem</h3>
+                <p>Statistical computing, spatial analysis, and visualization</p>
+            </div>
+            <div class="resource-card-body">
+                <div class="resource-subgroup">
+                    <h4>Learning Resources</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://stats.oarc.ucla.edu/r/" target="_blank" rel="noopener noreferrer">R Learning Modules (UCLA)</a></li>
+                        <li><a href="https://datascienceplus.com/r-python-data-science/" target="_blank" rel="noopener noreferrer">R for Data Science</a></li>
+                        <li><a href="https://carpentries.org/" target="_blank" rel="noopener noreferrer">The Carpentries (R Workshops)</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-subgroup">
+                    <h4>Spatial & Environmental Data (R-compatible)</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://pjbartlein.github.io/REarthSysSci/netCDF.html" target="_blank" rel="noopener noreferrer">netCDF in R (Climate Data)</a></li>
+                        <li><a href="https://ngdc.noaa.gov/" target="_blank" rel="noopener noreferrer">NCEI Spatial Database</a></li>
+                        <li><a href="https://datacatalog.worldbank.org/search/dataset/0038272/derived-map-of-global-electricity-transmission-and-distribution-lines" target="_blank" rel="noopener noreferrer">Global Electricity Lines</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-subgroup">
+                    <h4>Advanced Methods</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://rdpackages.github.io/" target="_blank" rel="noopener noreferrer">Regression Discontinuity (R packages)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Python Resources Card -->
+        <div class="resource-category-card">
+            <div class="resource-card-header">
+                <span class="resource-icon">💻</span>
+                <h3>Python Ecosystem</h3>
+                <p>Machine learning, econometrics, and computational economics</p>
+            </div>
+            <div class="resource-card-body">
+                <div class="resource-subgroup">
+                    <h4>Learning Resources</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://python.quantecon.org/" target="_blank" rel="noopener noreferrer">QuantEcon with Python</a></li>
+                        <li><a href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrer">Python Tutorial (W3Schools)</a></li>
+                        <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks.html" target="_blank" rel="noopener noreferrer">Jupyter Notebooks for Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-subgroup">
+                    <h4>Data Sources (Python-friendly)</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://www.ipums.org/" target="_blank" rel="noopener noreferrer">IPUMS DHS Database (via API)</a></li>
+                        <li><a href="https://osf.io/3sn2k/" target="_blank" rel="noopener noreferrer">COVID-19 Survey Data</a></li>
+                        <li><a href="https://ourworldindata.org/covid-cases" target="_blank" rel="noopener noreferrer">Our World in Data</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-subgroup">
+                    <h4>Advanced Tools</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://carpentries.org/" target="_blank" rel="noopener noreferrer">The Carpentries (Python)</a></li>
+                        <li><a href="https://datascienceplus.com/r-python-data-science/" target="_blank" rel="noopener noreferrer">Python & R Integration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- GAMS Resources Card -->
+        <div class="resource-category-card">
+            <div class="resource-card-header">
+                <span class="resource-icon">⚙️</span>
+                <h3>GAMS Ecosystem</h3>
+                <p>Computable general equilibrium and economic simulation models</p>
+            </div>
+            <div class="resource-card-body">
+                <div class="resource-subgroup">
+                    <h4>Model Databases</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://www.pep-net.org/research-resources" target="_blank" rel="noopener noreferrer">PEP CGE Models & Data</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-subgroup">
+                    <h4>Policy Analysis Data</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://www.worldbank.org/en/programs/lsms" target="_blank" rel="noopener noreferrer">LSMS (Social Accounting Matrices)</a></li>
+                        <li><a href="https://www-personal.umich.edu/~jvmalik/electricity/" target="_blank" rel="noopener noreferrer">Energy Infrastructure Data</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cross-Platform Resources Card -->
+        <div class="resource-category-card">
+            <div class="resource-card-header">
+                <span class="resource-icon">🔗</span>
+                <h3>Cross-Platform Resources</h3>
+                <p>Replication materials and code repositories (STATA, R, Python)</p>
+            </div>
+            <div class="resource-card-body">
+                <div class="resource-subgroup">
+                    <h4>Replication Archives</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://www.openicpsr.org/openicpsr/search/studies?q=American%20Economic%20Association" target="_blank" rel="noopener noreferrer">AEA OpenICPSR</a></li>
+                        <li><a href="https://dataverse.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a></li>
+                        <li><a href="https://dataverse.harvard.edu/dataverse/restat" target="_blank" rel="noopener noreferrer">REstat Dataverse</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-subgroup">
+                    <h4>Integration Tools</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://dev-ii-seminar.readthedocs.io/en/latest/notebooks/Stata-and-R-in-Jupyter.html" target="_blank" rel="noopener noreferrer">STATA & R in Jupyter</a></li>
+                        <li><a href="https://datascienceplus.com/r-python-data-science/" target="_blank" rel="noopener noreferrer">R & Python Integration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Skills Card -->
+        <div class="resource-category-card">
+            <div class="resource-card-header">
+                <span class="resource-icon">✍️</span>
+                <h3>Research Communication</h3>
+                <p>Academic writing, presentations, and professional development</p>
+            </div>
+            <div class="resource-card-body">
+                <div class="resource-subgroup">
+                    <h4>Writing Resources</h4>
+                    <ul class="resource-list">
+                        <li><a href="https://writingcenter.fas.harvard.edu/pages/resources" target="_blank" rel="noopener noreferrer">Harvard Writing Resources</a></li>
+                        <li><a href="https://www.ryanbedwards.com/post/writing-seminar-discussant-tips/" target="_blank" rel="noopener noreferrer">Seminar & Discussant Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Reference Guide -->
+    <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+        <h3 style="font-family: 'Crimson Pro', serif; font-size: 1.5rem; font-weight: 700; color: #1a3a52; margin-bottom: 1.5rem;">
+            🎯 Quick Reference: Software → Data Workflows
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="padding: 1.25rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #1a3a52;">
+                <h4 style="font-weight: 600; color: #1a3a52; margin-bottom: 0.75rem;">STATA Users</h4>
+                <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">
+                    Best for: Panel data econometrics, productivity analysis, household surveys (LSMS, Young Lives)
                 </p>
             </div>
-        </section>
+            <div style="padding: 1.25rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #2d5a7b;">
+                <h4 style="font-weight: 600; color: #2d5a7b; margin-bottom: 0.75rem;">R Users</h4>
+                <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">
+                    Best for: Spatial analysis, environmental data (netCDF), statistical modeling, visualization
+                </p>
+            </div>
+            <div style="padding: 1.25rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #d97d54;">
+                <h4 style="font-weight: 600; color: #d97d54; margin-bottom: 0.75rem;">Python Users</h4>
+                <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">
+                    Best for: Machine learning, large datasets, web scraping, computational economics (QuantEcon)
+                </p>
+            </div>
+            <div style="padding: 1.25rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #c76d44;">
+                <h4 style="font-weight: 600; color: #c76d44; margin-bottom: 0.75rem;">GAMS Users</h4>
+                <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">
+                    Best for: CGE models, policy simulation, optimization, multi-sector economic modeling
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note -->
+    <div style="margin-top: 2rem; padding: 1.5rem; background: #fff8f0; border-radius: 12px; border-left: 4px solid #d97d54;">
+        <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0;">
+            <strong>📌 Note:</strong> These resources are curated for students, researchers, and practitioners in applied economics, development, agriculture, environment, and policy analysis. All links lead to publicly accessible materials and open-source tools. Resources are organized by primary software but many datasets and methods work across multiple platforms.
+        </p>
+    </div>
+</section>
 
         <section id="contact">
             <h2>Contact</h2>
