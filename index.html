@@ -141,6 +141,20 @@
             color: white;
         }
 
+        .contact-box {
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        .contact-box a {
+            color: #d97d54;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        /* Message Button in Sidebar */
         .message-button {
             display: block;
             padding: 1rem;
@@ -188,75 +202,52 @@
             color: #333;
         }
 
-        /* CV SECTION STYLING */
-        .cv-section {
-            background: white;
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cv-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        .cv-header h2 {
-            background: linear-gradient(135deg, #1a3a52 0%, #d97d54 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-        }
-
-        .cv-header p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
+        /* CV DOWNLOAD BUTTON IN ABOUT SECTION */
         .cv-download-box {
             margin: 2rem 0;
-            padding: 2rem;
+            padding: 1.5rem;
             background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
             border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
             box-shadow: 0 4px 16px rgba(26, 58, 82, 0.2);
         }
 
-        .cv-download-box h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .cv-download-box .cv-text {
+            flex: 1;
             color: white;
-            text-align: center;
         }
 
-        .cv-download-box p {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            text-align: center;
+        .cv-download-box .cv-text h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
         }
 
-        .cv-buttons {
+        .cv-download-box .cv-text p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .cv-download-box .cv-buttons {
             display: flex;
             gap: 1rem;
-            justify-content: center;
             flex-wrap: wrap;
         }
 
         .cv-btn {
-            padding: 1rem 2rem;
+            padding: 0.9rem 1.8rem;
             background: #d97d54;
             color: white;
             border: none;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -281,43 +272,6 @@
         .cv-btn-secondary:hover {
             background: #f5f5f5;
             color: #d97d54;
-        }
-
-        .cv-preview {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 2rem;
-        }
-
-        .cv-preview h4 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1a3a52;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .cv-item {
-            padding: 1.5rem;
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border-left: 4px solid #d97d54;
-        }
-
-        .cv-item h5 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1a3a52;
-            margin-bottom: 0.5rem;
-        }
-
-        .cv-item p {
-            font-size: 0.95rem;
-            color: #666;
-            margin: 0;
         }
 
         section {
@@ -585,6 +539,7 @@
             flex-wrap: wrap;
         }
 
+        /* CREATIVE RESOURCES SECTION */
         .resources-header {
             text-align: center;
             max-width: 700px;
@@ -736,6 +691,83 @@
             color: #d97d54;
         }
 
+        .resource-spotlight {
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-spotlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .resource-spotlight h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .resource-spotlight p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .resource-spotlight-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .resource-spotlight-btn {
+            padding: 1rem 2rem;
+            background: #d97d54;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 16px rgba(217, 125, 84, 0.3);
+        }
+
+        .resource-spotlight-btn:hover {
+            background: #c76d44;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(217, 125, 84, 0.4);
+        }
+
+        .resource-spotlight-btn.secondary {
+            background: white;
+            color: #1a3a52;
+        }
+
+        .resource-spotlight-btn.secondary:hover {
+            background: #f5f5f5;
+            color: #d97d54;
+        }
+
         .resource-tools {
             background: #fff8f0;
             border-radius: 16px;
@@ -864,7 +896,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .cv-section {
+            .resource-spotlight {
                 padding: 2rem;
             }
         }
@@ -880,7 +912,6 @@
             <nav>
                 <a href="#about" onclick="scrollTo('about')">About</a>
                 <a href="#publications" onclick="scrollTo('publications')">Publications</a>
-                <a href="#cv" onclick="scrollTo('cv')">CV</a>
                 <a href="#engagements" onclick="scrollTo('engagements')">Engagements</a>
                 <a href="#teaching" onclick="scrollTo('teaching')">Teaching</a>
                 <a href="#conferences" onclick="scrollTo('conferences')">Conferences</a>
@@ -926,6 +957,22 @@
                     <p>Currently, I work as an economist at the United Nations Food and Agriculture Organization (FAO), where I contribute to global and country-level analysis on antimicrobial resistance economics, livestock productivity, climate mitigation and adaptation, and agrifood investment strategies. My work links micro-level evidence with economy-wide modelling to understand trade-offs, identify priority investments, and provide practical inputs for policymaking in low- and middle-income countries, especially in settings facing structural constraints and high uncertainty.</p>
 
                     <p>My research is published in journals including Nature Communications, Agricultural Economics, Energy Economics, and Energy Policy.</p>
+
+                    <!-- CV DOWNLOAD BOX -->
+                    <div class="cv-download-box">
+                        <div class="cv-text">
+                            <h3>Curriculum Vitae</h3>
+                            <p>Download my complete academic and professional CV, or view my publications on Google Scholar.</p>
+                        </div>
+                        <div class="cv-buttons">
+                            <a href="/files/Wondmagegn_Tirkaso_CV.pdf" class="cv-btn" target="_blank" rel="noopener noreferrer">
+                                📄 Download CV
+                            </a>
+                            <a href="https://scholar.google.se/citations?user=bwxyUQ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="cv-btn cv-btn-secondary">
+                                📚 Google Scholar
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -958,46 +1005,6 @@
 
             <div id="publicationsList">
                 <!-- Publications will be loaded here by JavaScript -->
-            </div>
-        </section>
-
-        <!-- NEW CV SECTION -->
-        <section id="cv">
-            <div class="cv-section">
-                <div class="cv-header">
-                    <h2>Curriculum Vitae</h2>
-                    <p>Download my complete academic and professional CV, or explore my publications and research profile on Google Scholar.</p>
-                </div>
-
-                <div class="cv-download-box">
-                    <h3>📄 Download CV</h3>
-                    <p>Get access to my complete curriculum vitae including education, professional experience, publications, and conference presentations.</p>
-                    <div class="cv-buttons">
-                        <a href="/files/Wondmagegn_Tirkaso_CV.pdf" class="cv-btn" target="_blank" rel="noopener noreferrer">
-                            📥 Download PDF
-                        </a>
-                        <a href="https://scholar.google.se/citations?user=bwxyUQ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="cv-btn cv-btn-secondary">
-                            📚 Google Scholar
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cv-preview">
-                    <h4>Quick Overview</h4>
-                    <div class="cv-item">
-                        <h5>Current Position</h5>
-                        <p>Economist, Food and Agriculture Organization of the United Nations (FAO)</p>
-                    </div>
-                    <div class="cv-item">
-                        <h5>Education</h5>
-                        <p>PhD in Economics - Swedish University of Agricultural Sciences (SLU)</p>
-                        <p>BSc in Economics - Jimma University</p>
-                    </div>
-                    <div class="cv-item">
-                        <h5>Research Focus</h5>
-                        <p>Agricultural Economics, One Health, Climate & Sustainability, Productivity Analysis</p>
-                    </div>
-                </div>
             </div>
         </section>
 
