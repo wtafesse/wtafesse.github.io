@@ -1,0 +1,10 @@
+# robots.txt for https://wtafesse.github.io/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wtafesse.github.io/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 1
