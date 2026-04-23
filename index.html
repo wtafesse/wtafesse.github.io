@@ -501,6 +501,7 @@
             gap: 0.5rem;
             flex-wrap: wrap;
             margin-bottom: 1rem;
+            align-items: center;
         }
 
         .tag {
@@ -515,22 +516,20 @@
         .share-buttons {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #f0f0f0;
+            gap: 0.35rem;
+            margin-left: 0.5rem;
         }
 
         .share-label {
-            font-size: 0.85rem;
-            color: #666;
+            font-size: 0.7rem;
+            color: #999;
             font-weight: 500;
-            margin-right: 0.25rem;
+            margin-right: 0.15rem;
         }
 
         .share-btn {
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -538,14 +537,14 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: white;
         }
 
         .share-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
         }
 
         .share-twitter {
@@ -581,7 +580,7 @@
         }
 
         .share-icon {
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             line-height: 1;
         }
 
@@ -2137,36 +2136,35 @@
                     ${pub.tags ? `
                         <div class="tags">
                             ${pub.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                            <div class="share-buttons" onclick="event.stopPropagation()">
+                                <span class="share-label">Share:</span>
+                                <button onclick="shareOnTwitter('${pub.title.replace(/'/g, "\\'")}', '${pub.link || ''}')" 
+                                        class="share-btn share-twitter" 
+                                        aria-label="Share on X"
+                                        title="Share on X">
+                                    <span class="share-icon">𝕏</span>
+                                </button>
+                                <button onclick="shareOnLinkedIn('${pub.link || ''}')" 
+                                        class="share-btn share-linkedin" 
+                                        aria-label="Share on LinkedIn"
+                                        title="Share on LinkedIn">
+                                    <span class="share-icon">in</span>
+                                </button>
+                                <button onclick="shareOnFacebook('${pub.link || ''}')" 
+                                        class="share-btn share-facebook" 
+                                        aria-label="Share on Facebook"
+                                        title="Share on Facebook">
+                                    <span class="share-icon">f</span>
+                                </button>
+                                <button onclick="shareViaEmail('${pub.title.replace(/'/g, "\\'")}', '${pub.link || ''}')" 
+                                        class="share-btn share-email" 
+                                        aria-label="Share via Email"
+                                        title="Share via Email">
+                                    <span class="share-icon">✉</span>
+                                </button>
+                            </div>
                         </div>
                     ` : ''}
-                    
-                    <div class="share-buttons" onclick="event.stopPropagation()">
-                        <span class="share-label">Share:</span>
-                        <button onclick="shareOnTwitter('${pub.title.replace(/'/g, "\\'")}', '${pub.link || ''}')" 
-                                class="share-btn share-twitter" 
-                                aria-label="Share on X"
-                                title="Share on X">
-                            <span class="share-icon">𝕏</span>
-                        </button>
-                        <button onclick="shareOnLinkedIn('${pub.link || ''}')" 
-                                class="share-btn share-linkedin" 
-                                aria-label="Share on LinkedIn"
-                                title="Share on LinkedIn">
-                            <span class="share-icon">in</span>
-                        </button>
-                        <button onclick="shareOnFacebook('${pub.link || ''}')" 
-                                class="share-btn share-facebook" 
-                                aria-label="Share on Facebook"
-                                title="Share on Facebook">
-                            <span class="share-icon">f</span>
-                        </button>
-                        <button onclick="shareViaEmail('${pub.title.replace(/'/g, "\\'")}', '${pub.link || ''}')" 
-                                class="share-btn share-email" 
-                                aria-label="Share via Email"
-                                title="Share via Email">
-                            <span class="share-icon">✉</span>
-                        </button>
-                    </div>
                     
                     <div id="pub-details-${idx}" class="pub-details hidden">
                         ${pub.abstract ? `
