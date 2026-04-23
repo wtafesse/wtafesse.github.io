@@ -512,6 +512,79 @@
             font-weight: 500;
         }
 
+        .share-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .share-label {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+            margin-right: 0.25rem;
+        }
+
+        .share-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .share-twitter {
+            background: #000000;
+        }
+
+        .share-twitter:hover {
+            background: #333333;
+        }
+
+        .share-linkedin {
+            background: #0A66C2;
+        }
+
+        .share-linkedin:hover {
+            background: #004182;
+        }
+
+        .share-facebook {
+            background: #1877F2;
+        }
+
+        .share-facebook:hover {
+            background: #0d5dbf;
+        }
+
+        .share-email {
+            background: #666666;
+        }
+
+        .share-email:hover {
+            background: #444444;
+        }
+
+        .share-icon {
+            font-size: 0.95rem;
+            line-height: 1;
+        }
+
         .pub-details {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
@@ -2067,6 +2140,34 @@
                         </div>
                     ` : ''}
                     
+                    <div class="share-buttons" onclick="event.stopPropagation()">
+                        <span class="share-label">Share:</span>
+                        <button onclick="shareOnTwitter('${pub.title.replace(/'/g, "\\'")}', '${pub.link || ''}')" 
+                                class="share-btn share-twitter" 
+                                aria-label="Share on X"
+                                title="Share on X">
+                            <span class="share-icon">𝕏</span>
+                        </button>
+                        <button onclick="shareOnLinkedIn('${pub.link || ''}')" 
+                                class="share-btn share-linkedin" 
+                                aria-label="Share on LinkedIn"
+                                title="Share on LinkedIn">
+                            <span class="share-icon">in</span>
+                        </button>
+                        <button onclick="shareOnFacebook('${pub.link || ''}')" 
+                                class="share-btn share-facebook" 
+                                aria-label="Share on Facebook"
+                                title="Share on Facebook">
+                            <span class="share-icon">f</span>
+                        </button>
+                        <button onclick="shareViaEmail('${pub.title.replace(/'/g, "\\'")}', '${pub.link || ''}')" 
+                                class="share-btn share-email" 
+                                aria-label="Share via Email"
+                                title="Share via Email">
+                            <span class="share-icon">✉</span>
+                        </button>
+                    </div>
+                    
                     <div id="pub-details-${idx}" class="pub-details hidden">
                         ${pub.abstract ? `
                             <h4>Abstract</h4>
@@ -2162,6 +2263,29 @@
                 alert('Thank you for your message! I will get back to you soon.');
                 window.history.replaceState({}, document.title, window.location.pathname);
             }
+        }
+
+        // Social media share functions
+        function shareOnTwitter(title, url) {
+            const text = encodeURIComponent(`Check out this research: ${title}`);
+            const shareUrl = url ? encodeURIComponent(url) : '';
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${shareUrl}`, '_blank', 'width=550,height=420');
+        }
+
+        function shareOnLinkedIn(url) {
+            const shareUrl = url ? encodeURIComponent(url) : '';
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank', 'width=550,height=420');
+        }
+
+        function shareOnFacebook(url) {
+            const shareUrl = url ? encodeURIComponent(url) : '';
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank', 'width=550,height=420');
+        }
+
+        function shareViaEmail(title, url) {
+            const subject = encodeURIComponent(`Research Paper: ${title}`);
+            const body = encodeURIComponent(`I thought you might be interested in this research:\n\n${title}\n\n${url || 'Link not available'}`);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
         }
 
         window.onload = function() {
