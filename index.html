@@ -114,6 +114,7 @@
             background: #fafafa;
             color: #1a1a1a;
             line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
         }
 
         .header {
@@ -162,6 +163,9 @@
             border-bottom: 2px solid transparent;
             transition: all 0.3s ease;
             cursor: pointer;
+            min-height: 44px; /* iOS touch target recommendation */
+            display: flex;
+            align-items: center;
         }
 
         nav a:hover,
@@ -429,6 +433,10 @@
             transition: background 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            min-height: 44px; /* Touch-friendly */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn:hover {
@@ -1206,6 +1214,330 @@
 
             .resource-spotlight {
                 padding: 2rem;
+            }
+        }
+
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            /* Header adjustments */
+            .header {
+                padding: 1.5rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .header p {
+                font-size: 0.8rem;
+            }
+
+            .header-content {
+                gap: 0.75rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                gap: 0.5rem 1rem;
+                justify-content: flex-start;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+                min-height: 40px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 6px;
+                border-bottom: none;
+            }
+
+            nav a:hover,
+            nav a.active {
+                background: rgba(217, 125, 84, 0.2);
+                border-bottom: none;
+            }
+
+            /* Container adjustments */
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            /* Typography */
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .intro-box {
+                font-size: 1.1rem;
+                padding: 1.5rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+
+            /* About section */
+            .about-grid {
+                gap: 2rem;
+            }
+
+            .profile-placeholder {
+                height: 200px;
+                font-size: 3rem;
+            }
+
+            /* CV download */
+            .cv-download-box .cv-text h3 {
+                font-size: 1.2rem;
+            }
+
+            .cv-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            /* Filter box */
+            .filter-box {
+                padding: 1rem;
+                gap: 0.75rem;
+            }
+
+            .filter-box input,
+            .filter-box select {
+                font-size: 0.9rem;
+                padding: 0.65rem 0.85rem;
+            }
+
+            .btn {
+                padding: 0.65rem 1.25rem;
+                font-size: 0.85rem;
+            }
+
+            /* Publication cards */
+            .pub-card {
+                padding: 1.5rem;
+            }
+
+            .pub-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .pub-authors,
+            .pub-journal {
+                font-size: 0.85rem;
+            }
+
+            /* Engagement cards */
+            .engagement-card,
+            .teaching-card,
+            .conference-box {
+                padding: 1.5rem;
+            }
+
+            .engagement-card h3,
+            .teaching-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .engagement-card p {
+                font-size: 1rem;
+            }
+
+            .engagement-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            /* Conference items */
+            .conference-item h4 {
+                font-size: 1rem;
+            }
+
+            .conference-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            /* Resources section */
+            .resources-header h2 {
+                font-size: 2rem;
+            }
+
+            .resources-header p {
+                font-size: 1rem;
+            }
+
+            .resource-card-header {
+                padding: 1.5rem;
+            }
+
+            .resource-icon {
+                font-size: 2rem;
+            }
+
+            .resource-card-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .resource-card-body {
+                padding: 1rem 1.5rem 1.5rem;
+            }
+
+            .resource-spotlight h3 {
+                font-size: 1.5rem;
+            }
+
+            .resource-spotlight p {
+                font-size: 1rem;
+            }
+
+            .resource-tools {
+                padding: 2rem 1.5rem;
+            }
+
+            .resource-tools h3 {
+                font-size: 1.5rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            /* Media section */
+            .media-category {
+                padding: 1.5rem;
+            }
+
+            .media-category-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .media-item {
+                padding: 1.25rem;
+            }
+
+            .media-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .media-item-header h4 {
+                font-size: 1.05rem;
+            }
+
+            /* Contact section */
+            .contact-modal-content {
+                max-width: 90%;
+                margin: 1rem;
+            }
+
+            .contact-modal-header {
+                padding: 1.5rem 1.5rem 1rem;
+            }
+
+            .contact-modal-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .contact-modal-body {
+                padding: 1.5rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 1.5rem 0;
+            }
+
+            footer p {
+                font-size: 0.85rem;
+            }
+
+            .disclaimer {
+                font-size: 0.8rem;
+            }
+
+            /* Message button */
+            .message-button {
+                padding: 0.85rem;
+                font-size: 0.85rem;
+            }
+
+            /* Share buttons adjustment */
+            .share-buttons {
+                flex-wrap: wrap;
+            }
+
+            .share-btn {
+                width: 28px;
+                height: 28px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .header {
+                padding: 1rem 0.75rem;
+            }
+
+            .header h1 {
+                font-size: 1.25rem;
+            }
+
+            .container {
+                padding: 1.5rem 0.75rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .intro-box {
+                font-size: 1rem;
+                padding: 1.25rem;
+            }
+
+            nav {
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                padding: 0.4rem 0;
+            }
+
+            .pub-card,
+            .engagement-card,
+            .teaching-card,
+            .conference-box {
+                padding: 1.25rem;
+            }
+
+            .resource-card-header,
+            .resource-card-body {
+                padding: 1.25rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-spotlight {
+                padding: 1.5rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                font-size: 0.9rem;
+                padding: 0.65rem 0.85rem;
             }
         }
 
