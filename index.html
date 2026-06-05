@@ -181,6 +181,8 @@
         .media-link:hover { color: #c76d44; gap: 0.75rem; }
         .media-placeholder { padding: 2rem; background: #fafafa; border-radius: 8px; border: 2px dashed #e0e0e0; text-align: center; }
         .media-placeholder p { margin: 0; }
+        .media-item-report-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: #1a3a52; text-decoration: none; font-weight: 500; background: #fff8f0; padding: 0.3rem 0.75rem; border-radius: 6px; border: 1px solid #f0d0b8; transition: all 0.2s ease; margin-top: 0.5rem; }
+        .media-item-report-link:hover { background: #d97d54; color: white; border-color: #d97d54; }
         @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .profile-sidebar { position: static; } .academic-ids { grid-template-columns: 1fr; } }
         @media (max-width: 768px) { .header { padding: 1.5rem 1rem; } .header-content { flex-direction: column; align-items: flex-start; } nav { width: 100%; gap: 0.5rem 1rem; } nav a { font-size: 0.85rem; padding: 0.5rem 0.75rem; background: rgba(255,255,255,0.1); border-radius: 6px; border-bottom: none; } .container { padding: 2rem 1rem; } h2 { font-size: 2rem; } }
     </style>
@@ -365,6 +367,17 @@
                 <article class="media-category">
                     <div class="media-category-header"><span style="font-size: 2rem;">📰</span><h3>Press Coverage</h3></div>
                     <div class="media-items">
+                        <div class="media-item">
+                            <div class="media-item-header">
+                                <h4>Antibiotics Use in Livestock to Rise, UN Warns</h4>
+                                <span class="media-date">The Guardian, June 3, 2026</span>
+                            </div>
+                            <p>The Guardian covers the FAO flagship report on the economics of antimicrobial use in livestock, reporting on projections of rising antibiotic use and the economic consequences of action or inaction on antimicrobial resistance.</p>
+                            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+                                <a href="https://www.theguardian.com/environment/2026/jun/03/antibiotics-use-in-livestock-rise-un-fao" target="_blank" rel="noopener noreferrer" class="media-link">Read Article →</a>
+                                <a href="https://doi.org/10.4060/cd9571en" target="_blank" rel="noopener noreferrer" class="media-item-report-link">📄 Related FAO Report</a>
+                            </div>
+                        </div>
                         <div class="media-item">
                             <div class="media-item-header"><h4>Antibiotic Use in Agriculture is Rising – Should We Be Worried?</h4><span class="media-date">BBC Science Focus, April 2025</span></div>
                             <p>Research on global antibiotic use trends in livestock production and their implications for antimicrobial resistance featured in BBC Science Focus.</p>
